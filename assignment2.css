@@ -1,0 +1,106 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 5px;
+    color: #FF5733;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+    background: #008CBA;
+    color: white;
+    border-radius: 5px;
+}
+
+nav ul li:hover {
+    background-color: #005f73;
+}
+
+/* Page Sections */
+.page {
+    display: none;
+    padding: 20px;
+}
+
+/* Custom Button */
+.custom-button {
+    background-color: #FF5733;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.custom-button:hover {
+    background-color: #C70039;
+}
+
+/* Audio Control Bar */
+.audio-div {
+    position: center;
+    bottom: 3px;
+    width: 100%;
+    text-align: center;
+    background: #f3f3f3;
+    padding: 3px;
+    font-size: 10px;
+    height: auto;
+}
+
+.audio-div button {
+    font-size: 10px;
+    padding: 3px 6px;
+    margin: 1px;
+    border-radius: 3px;
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.audio-div button:hover {
+    background-color: #C70039;
+}
+
+/* Dog Carousel */
+#dogCarousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    max-width: 100%;
+    scroll-behavior: smooth;
+    justify-content: center;
+}
+
+#dogCarousel img {
+    height: 200px;
+    width: auto;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* Dog Breed Info Box */
+#breedInfo {
+    display: none;
+    margin-top: 20px;
+    background: #fefefe;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
