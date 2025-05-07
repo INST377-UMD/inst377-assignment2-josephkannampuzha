@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>Stocks & Dogs Web App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="assignment2.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li onclick="showPage('home')">Home</li>
+            <li onclick="showPage('stocks')">Stocks</li>
+            <li onclick="showPage('dogs')">Dogs</li>
+        </ul>
+    </nav>
+
+    <!-- Pages -->
+    <section id="home" class="page">
+        <h1>Welcome to Stocks & Dogs Insights</h1>
+        <p id="quote">Loading quote...</p>
+        <button class="custom-button" onclick="showPage('stocks')">Go to Stocks</button>
+        <button class="custom-button" onclick="showPage('dogs')">Go to Dogs</button>
+    </section>
+
+    <section id="stocks" class="page">
+        <h1>Stock Market Analysis</h1>
+        
+        <input type="text" id="ticker" placeholder="Enter Stock Ticker">
+        
+        <!--  Duration Dropdown Added -->
+        <select id="duration" class="custom-button">
+            <option value="30">30 Days</option>
+            <option value="60">60 Days</option>
+            <option value="90">90 Days</option>
+        </select>
+
+        <button class="custom-button" onclick="fetchStock()">Lookup Stock</button>
+
+        <canvas id="stockChart" width="600" height="400"></canvas>
+
+        <h2>Top 5 Trending Stocks on Reddit</h2>
+        <table id="stocksTable">
+            <tr>
+                <th>Ticker</th>
+                <th>Comments</th>
+                <th>Sentiment</th>
+            </tr>
+        </table>
+    </section>
+
+    <section id="dogs" class="page">
+        <h1>Dog Insights</h1>
+        <div id="dogCarousel"></div>
+        <div id="breedsContainer"></div>
+        <div id="breedInfo"></div>
+    </section>
+
+    <!-- Audio Control -->
+    <div class="audio-div">
+        <button onclick="annyang.pause()">Turn Off Audio</button>
+        <button onclick="annyang.resume()">Turn On Audio</button>
+        <p>Use voice commands: "Hello", "Change the color to red", "Navigate to Stocks"</p>
+    </div>
+
+    <script src="assignment2.js"></script>
+</body>
+</html>
